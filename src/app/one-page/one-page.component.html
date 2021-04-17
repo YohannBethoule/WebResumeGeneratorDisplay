@@ -1,0 +1,66 @@
+<div class="one-page container-fluid d-flex  align-self-center"
+     [ngStyle]="{'background-color' : pageIndex % 2 == 0 ? siteSettings.primary_background_color : siteSettings.secondary_background_color
+                , 'color': pageIndex % 2 == 0 ? siteSettings.primary_font_color : siteSettings.secondary_font_color}">
+  <a class="anchor" id="anchor_page{{pageIndex}}"></a>
+
+  <article class="page-container col-md-12 d-flex flex-column align-self-center">
+    <h1 class="page-title" [ngStyle]="{'font-family': siteSettings.primary_font}"><i class="fa fa-{{ pageTitleIcon }}"></i> {{ pageTitle }}</h1>
+
+    <div *ngIf="pageIndex==0">
+      <app-section-presentation
+                        [name]="infos.name"
+                        [jobTitle]="infos.jobTitle"
+                        [location]="infos.location"
+                        [mail]="infos.mail"
+                        [github]="infos.github"
+                        [gitlab]="infos.gitlab"
+                        [linkedin]="infos.linkedin"
+                        [phone]="infos.phone">
+      </app-section-presentation>
+    </div>
+
+    <div *ngIf="pageTitle=='Expériences professionnelles'"  id="div_jobs">
+      <app-section-job  *ngFor="let job of jobs"
+                        [title]="job.title"
+                        [city]="job.city"
+                        [company]="job.company"
+                        [periode]="job.periode"
+                        [description]="job.description"
+                        [siteSettings]="siteSettings">
+      </app-section-job>
+    </div>
+
+    <div *ngIf="pageTitle=='Formations'"  id="div_trainings">
+      <app-section-training  *ngFor="let training of trainings"
+                             [title]="training.title"
+                             [place]="training.place"
+                             [date]="training.date"
+                             [subjects]="training.subjects"
+                             [siteSettings]="siteSettings">
+      </app-section-training>
+    </div>
+
+    <div *ngIf="pageTitle=='Compétences'" id="div_skills">
+      <div class="row" *ngFor="let item of [].constructor(skillset.length/2); let i = index ">
+        <div class="col" *ngFor="let skill of skillset.slice(i*2,i*2+2)">
+          <app-section-skill
+            [domain]="skill.domain"
+            [siteSettings]="siteSettings"
+            [skills]="skill.skills">
+          </app-section-skill>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="pageTitle=='Réalisations'"  id="div_projects">
+      <app-section-project  *ngFor="let project of projects"
+                             [title]="project.title"
+                             [client]="project.client"
+                             [summary]="project.summary"
+                             [mission]="project.mission"
+                             [techs]="project.techs"
+                             [siteSettings]="siteSettings">
+      </app-section-project>
+    </div>
+  </article>
+</div>

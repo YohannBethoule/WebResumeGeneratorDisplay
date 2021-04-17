@@ -1,0 +1,6 @@
+<section class="poste">
+  <h2 [ngStyle]="{'font-family' : siteSettings.secondary_font}">> {{title}}</h2>
+  <div class="place"><span class="company" [ngStyle]="{'color' : siteSettings.ternary_color}">{{company}}</span><span class="date_obtention">, {{periode}}</span></div>
+  <div class="ville">{{city}}</div>
+  <p class="description" [innerText]="description"></p>
+</section>

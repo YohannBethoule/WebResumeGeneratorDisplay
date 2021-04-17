@@ -1,0 +1,30 @@
+<div class="one-page container-fluid d-flex align-content-center" id="page_presentation"
+     [ngStyle]="{'background-color': siteSettings.primary_background_color
+              , 'color' : siteSettings.primary_font_color}">
+  <a class="anchor" id="anchor_page"></a>
+  <article class="row presentation ">
+    <div class="col-md-6 d-flex align-self-center">
+      <div class="left-col text-center" [ngStyle]="{'border-color' : siteSettings.primary_font_color}">
+        <div class="round-image">
+          <img  *ngIf="srcImg!==undefined" src="{{srcImg}}" alt="Resume picture"/>
+        </div>
+        <h1 [ngStyle]="{'font-family' : siteSettings.primary_font}">
+          {{name}}
+        </h1>
+      </div>
+    </div>
+    <div class="col-md-6 d-flex align-self-center right-col">
+      <div class="infos-contact text-center">
+        <span class="title">{{jobTitle}}</span><br />
+        {{location}}<br />
+        {{phone}}<br />
+        <a href="mailto:{{mail}}" [ngStyle]="{'color' : siteSettings.primary_font_color}">{{mail}}</a><br />
+        <div class="icons-contact">
+          <a *ngIf="github !== undefined" href="{{github}}" target="_blank" [ngStyle]="{'color' : siteSettings.primary_font_color}"><i class="fa fa-github"></i></a>
+          <a *ngIf="gitlab !== undefined" href="{{gitlab}}" target="_blank" [ngStyle]="{'color' : siteSettings.primary_font_color}"><i class="fa fa-gitlab"></i></a>
+          <a *ngIf="linkedin !== undefined" href="{{linkedin}}" target="_blank" [ngStyle]="{'color' : siteSettings.primary_font_color}"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>

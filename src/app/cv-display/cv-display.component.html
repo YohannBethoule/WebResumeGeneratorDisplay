@@ -1,0 +1,27 @@
+<div [ngStyle]="{'font-family': siteSettings.ternary_font}">
+  <app-navbar [siteSettings]="siteSettings"></app-navbar>
+
+  <div id="nav-icon" [ngStyle]="{'color': siteSettings.ternary_color}">
+    <i class="open_navbar fa fa-bars" (click)="openNav()" [ngStyle]="{'color': siteSettings.ternary_color}" ngbTooltip="Navigation" placement="right"></i>
+  </div>
+
+  <div id="print-icon">
+    <i class="fa fa-print" (click)="print()" ngbTooltip="Télécharger le CV version PDF" placement="left" > </i>
+  </div>
+  <app-section-presentation [name]="infos.name"
+                            [jobTitle]="infos.jobTitle"
+                            [location]="infos.location"
+                            [mail]="infos.mail"
+                            [github]="infos.github"
+                            [gitlab]="infos.gitlab"
+                            [linkedin]="infos.linkedin"
+                            [srcImg]="infos.image"
+                            [phone]="infos.phone"
+                            [siteSettings]="siteSettings">
+  </app-section-presentation>
+  <app-one-page [pageTitle]="'Expériences professionnelles'" [pageTitleIcon]="'briefcase'" [pageIndex]="1" [jobs]="jobs" [siteSettings]="siteSettings"></app-one-page>
+  <app-one-page [pageTitle]="'Formations'" [pageTitleIcon]="'graduation-cap'" [pageIndex]="2" [trainings]="trainings" [siteSettings]="siteSettings"></app-one-page>
+  <app-one-page [pageTitle]="'Compétences'" [pageTitleIcon]="'align-left'" [pageIndex]="3" [skillset]="skillset" [siteSettings]="siteSettings"></app-one-page>
+  <app-one-page [pageTitle]="'Réalisations'" [pageTitleIcon]="'cogs'" [pageIndex]="4" [projects]="projects" [siteSettings]="siteSettings"></app-one-page>
+</div>
+

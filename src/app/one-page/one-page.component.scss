@@ -1,0 +1,50 @@
+@import '../../assets/colors';
+@import '../../assets/print_sizes';
+
+
+.one-page {
+  width: 100vw;
+  min-height: 100vh;
+  transition: margin-left 0.5s;
+
+  h1{
+    font-weight: bold;
+
+    font-size: 5rem;
+  }
+}
+
+.page-container{
+  display: inline-block;
+  padding: 5% 8%;
+
+  /* PAGE 2 & 3 */
+
+  .page-title{
+    font-size: 3rem;
+    margin-bottom: 5%;
+  }
+
+  section{
+    margin-bottom: 30px;
+    margin-left: 20px;
+  }
+}
+
+h2{
+  font-size: 2rem;
+}
+
+.place{
+  font-size: 1.3rem;
+  margin-left: 3%;
+}
+
+
+
+
+
+
+
+
+

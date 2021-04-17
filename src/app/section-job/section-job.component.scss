@@ -1,0 +1,24 @@
+@import '../../assets/colors';
+
+.poste{
+
+  .date_obtention{
+    font-size: 80%;
+  }
+
+  .place{
+    margin-bottom: 0.3rem;
+    font-size: 1.3rem;
+    margin-left: 2%;
+  }
+
+
+  .ville{
+    margin-left: 2%;
+    font-size: 1.3rem;
+  }
+
+  .description{
+    margin-top: 1%;
+  }
+}

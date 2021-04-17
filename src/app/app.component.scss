@@ -1,0 +1,58 @@
+@import '../assets/colors';
+
+#nav-icon{
+  position: fixed;
+  top: 1.6rem;
+  left: 1.5rem;
+  color: $nav-background;
+  font-size: 2rem;
+  z-index: 100;
+
+  .open_navbar{
+    transition: left 0.5s;
+    color: $nav-background;
+    float: left;
+
+    &:hover{
+        opacity: 0.6;
+    }
+  }
+
+  p{
+    //display: inline-block;
+    //float: right;
+    //font-size: 1.5rem;
+    visibility: hidden;
+    color: $active-blue;
+    text-align: right;
+    margin-left: 50%;
+    line-height: 2rem;
+  }
+}
+
+
+#print-icon{
+  position: fixed;
+  top: 1.6rem;
+  right: 1.5rem;
+  color: lightgrey;
+  cursor: pointer;
+  z-index: 100;
+
+  i{
+    float: right;
+    font-size: 2rem;
+    margin-left: 5%;
+  }
+
+  i:hover{
+    color: $active-blue;
+  }
+
+  p{
+    font-size: 1.5rem;
+    visibility: hidden;
+    color: $active-blue;
+    text-align: right;
+  }
+}

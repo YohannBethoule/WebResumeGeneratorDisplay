@@ -1,0 +1,12 @@
+.error-message{
+  height : 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 3em;
+  line-height: 4em;
+  font-family: 'Ubuntu';
+  font-weight: bold;
+}

@@ -1,0 +1,6 @@
+<section class="skill-class" id="front-end">
+  <h2 [ngStyle]="{'font-family' : siteSettings.secondary_font}">> {{domain}}</h2>
+  <ul class="skill-list">
+    <li *ngFor="let skill of skills">{{skill.title}}</li>
+  </ul>
+</section>

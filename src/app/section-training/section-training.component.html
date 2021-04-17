@@ -1,0 +1,22 @@
+<section>
+  <h2 [ngStyle]="{'font-family' : siteSettings.secondary_font}">> {{title}}<span class="date_obtention">, {{date}}</span></h2>
+  <div class="place" [ngStyle]="{'color': siteSettings.ternary_color}">{{place}}</div>
+  <div class="programme">
+    <div class="programme-line">
+      <h3>Sujets principaux</h3>
+      <p class="sujets">
+        <span *ngFor="let subject of subjects ">
+          <span *ngIf="subject.level==1">{{subject.title}}<br/></span>
+        </span>
+      </p>
+    </div>
+    <div class="programme-line">
+      <h3>Sujets secondaires</h3>
+      <p class="sujets">
+        <span *ngFor="let subject of subjects">
+          <span *ngIf="subject.level==2">{{subject.title}}<br/></span>
+        </span>
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+<nav class="navbar" #navbar
+     [ngStyle]="{'color': siteSettings.nav_items_color,
+      'background-color': siteSettings.nav_background_color,
+      'font-family': siteSettings.secondary_font}">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()" [ngStyle]="{'color': siteSettings.nav_items_color}">&times;</a>
+  <ul>
+    <li>
+      <a href="#anchor_page" (click)="closeNav(200)" [ngStyle]="{'color': siteSettings.nav_items_color}"><i class="fa fa-home"></i> Accueil</a>
+    </li>
+    <li>
+      <a href="#anchor_page1" (click)="closeNav(200)"  [ngStyle]="{'color': siteSettings.nav_items_color}"><i class="fa fa-briefcase"></i> Expériences professionnelles</a>
+    </li>
+    <li>
+      <a href="#anchor_page2" (click)="closeNav(200)"  [ngStyle]="{'color': siteSettings.nav_items_color}"><i class="fa fa-graduation-cap"></i> Formations</a>
+    </li>
+    <li>
+      <a href="#anchor_page3" (click)="closeNav(200)" [ngStyle]="{'color': siteSettings.nav_items_color}"><i class="fa fa-align-left"></i> Compétences</a>
+    </li>
+    <li>
+      <a href="#anchor_page4" (click)="closeNav(200)" [ngStyle]="{'color': siteSettings.nav_items_color}"><i class="fa fa-cogs"></i> Missions et réalisations</a>
+    </li>
+    <!--        <li>-->
+    <!--          <a href="#anchor_page6" onclick="closeNav(200)"><i class="fas fa-book"></i> Ressources</a>-->
+    <!--        </li>-->
+  </ul>
+</nav>

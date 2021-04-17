@@ -1,0 +1,15 @@
+<section class="mission" id="mission-legrand">
+  <h2 [ngStyle]="{'font-family' : siteSettings.secondary_font}">> {{title}}</h2>
+  <p class="client">
+    {{client}}
+  </p>
+  <p class="mission-summary">
+    {{summary}}
+  </p>
+  <p class="ma-mission" [innerText]="mission"></p>
+  <p class="technos">
+    <span *ngFor="let techno of techs">
+      {{techno.title}}<br/>
+    </span>
+  </p>
+</section>
